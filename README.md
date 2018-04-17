@@ -63,7 +63,7 @@ vault unseal hEdQ7k5JoBfWr62cXesooP5RERhNWcutshzU85gZ0Wmb
 
 vault unseal KRCzEi51zXY/btMiVyQ8U2WaC1JngDTjp0KsnBL+Um50
 
-export export VAULT_TOKEN="a44bf740-97a3-94bc-aba6-1ab85f8c0bb8"
+export VAULT_TOKEN="a44bf740-97a3-94bc-aba6-1ab85f8c0bb8"
 
 export VAULT_ADDR="http://127.0.0.1:8200"
 
