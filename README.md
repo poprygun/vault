@@ -73,6 +73,15 @@ vault read secret/vault-access
 
 ```
 
+## If Cloud Connectors are not used, following properties need to be set
+
+`spring.cloud.vault.uri=${vcap.services.hashicorp-vault.credentials.address}`
+
+`spring.cloud.vault.token=${vcap.services.hashicorp-vault.auth.token}`
+
+`spring.cloud.vault.generic.backend=${vcap.services.hashicorp-vault.credentials.backend.generic}`
+
+
 
 
 
