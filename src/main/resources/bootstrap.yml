@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: vault-access
+  cloud:
+    vault:
+      token: f01aa185-79c6-0146-bdad-c7006ca62ab1
+      scheme: http
