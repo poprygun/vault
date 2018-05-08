@@ -66,11 +66,15 @@ vault unseal hEdQ7k5JoBfWr62cXesooP5RERhNWcutshzU85gZ0Wmb
 
 vault unseal KRCzEi51zXY/btMiVyQ8U2WaC1JngDTjp0KsnBL+Um50
 
-export VAULT_TOKEN="5a94d7e3-f3c9-01e5-e865-2797d976de84"
+export VAULT_TOKEN="e818da3e-78bb-43b7-6b01-8b875ab05471"
 
 export VAULT_ADDR="http://127.0.0.1:8200"
 
-vault write secret/vault-access username=demouser password=demopassword
+vault write secret/vault-access username=app_user password=app_password
+vault write secret/vault-access/stage username_stage=app_stage_user password_stage=app_stage_password
+
+vault write secret/application username_common=common_user password_common=common_password
+vault write secret/application/stage username_common_stage=common_stage_user password_common_stage=common_stage_password
 
 vault read secret/vault-access
 

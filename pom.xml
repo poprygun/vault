@@ -28,25 +28,30 @@
 
 		<!-- Connectors needed to run in Cloudfoundry -->
 
+		<dependency>
+			<groupId>io.pivotal.spring.cloud</groupId>
+			<artifactId>spring-cloud-vault-connector-core</artifactId>
+			<version>1.0.0.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.pivotal.spring.cloud</groupId>
+			<artifactId>spring-cloud-vault-spring-connector</artifactId>
+			<version>1.0.0.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.pivotal.spring.cloud</groupId>
+			<artifactId>spring-cloud-vault-cloudfoundry-connector</artifactId>
+			<version>1.0.0.RELEASE</version>
+		</dependency>
+
+		<!-- If you want to test your application locally, add the following -->
 		<!--<dependency>-->
 			<!--<groupId>io.pivotal.spring.cloud</groupId>-->
-			<!--<artifactId>spring-cloud-vault-connector-core</artifactId>-->
+			<!--<artifactId>spring-cloud-vault-localconfig-connector</artifactId>-->
 			<!--<version>1.0.0.RELEASE</version>-->
 		<!--</dependency>-->
-
-		<!--<dependency>-->
-			<!--<groupId>io.pivotal.spring.cloud</groupId>-->
-			<!--<artifactId>spring-cloud-vault-spring-connector</artifactId>-->
-			<!--<version>1.0.0.RELEASE</version>-->
-		<!--</dependency>-->
-
-		<!--<dependency>-->
-			<!--<groupId>io.pivotal.spring.cloud</groupId>-->
-			<!--<artifactId>spring-cloud-vault-cloudfoundry-connector</artifactId>-->
-			<!--<version>1.0.0.RELEASE</version>-->
-		<!--</dependency>-->
-
-		<!-- The only dependency needed to run locally -->
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
