@@ -27,8 +27,11 @@ disable_mlock = true
 
 ## Configure Vault
 
+_May need to delete ~/.vault-token if error thrown during initialization._
+
 ```bash
 vault server -config vault.conf
+export VAULT_ADDR="http://127.0.0.1:8200"
 vault init -key-shares=5 -key-threshold=2
 ```
 
@@ -52,7 +55,7 @@ spring:
     name: vault-access
   cloud:
     vault:
-      token: a44bf740-97a3-94bc-aba6-1ab85f8c0bb8
+      token: 5a94d7e3-f3c9-01e5-e865-2797d976de84
       scheme: http
 
 ```
@@ -63,7 +66,7 @@ vault unseal hEdQ7k5JoBfWr62cXesooP5RERhNWcutshzU85gZ0Wmb
 
 vault unseal KRCzEi51zXY/btMiVyQ8U2WaC1JngDTjp0KsnBL+Um50
 
-export VAULT_TOKEN="a44bf740-97a3-94bc-aba6-1ab85f8c0bb8"
+export VAULT_TOKEN="5a94d7e3-f3c9-01e5-e865-2797d976de84"
 
 export VAULT_ADDR="http://127.0.0.1:8200"
 

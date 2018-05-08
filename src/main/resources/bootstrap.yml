@@ -3,5 +3,7 @@ spring:
     name: vault-access
   cloud:
     vault:
-      token: f01aa185-79c6-0146-bdad-c7006ca62ab1
+      token: 5a94d7e3-f3c9-01e5-e865-2797d976de84
       scheme: http
+#      enabled: false
+
