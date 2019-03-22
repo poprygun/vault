@@ -3,7 +3,6 @@ spring:
     name: vault-access
   cloud:
     vault:
-      token: e818da3e-78bb-43b7-6b01-8b875ab05471
-      scheme: http
-#      enabled: false
+      token: 00000000-0000-0000-0000-000000000000
+      uri: http://localhost:8200
 

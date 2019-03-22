@@ -47,18 +47,6 @@ vault init -key-shares=5 -key-threshold=2
 
 >Initial Root Token: a44bf740-97a3-94bc-aba6-1ab85f8c0bb8
 
-## Make sure to add Initial Root Taken from above to `bootstrap.yml`
-
-```yaml
-spring:
-  application:
-    name: vault-access
-  cloud:
-    vault:
-      token: 5a94d7e3-f3c9-01e5-e865-2797d976de84
-      scheme: http
-
-```
 
 ```bash
 
@@ -66,7 +54,7 @@ vault unseal hEdQ7k5JoBfWr62cXesooP5RERhNWcutshzU85gZ0Wmb
 
 vault unseal KRCzEi51zXY/btMiVyQ8U2WaC1JngDTjp0KsnBL+Um50
 
-export VAULT_TOKEN="e818da3e-78bb-43b7-6b01-8b875ab05471"
+export VAULT_TOKEN="a44bf740-97a3-94bc-aba6-1ab85f8c0bb8"
 
 export VAULT_ADDR="http://127.0.0.1:8200"
 
@@ -79,6 +67,25 @@ vault write secret/application/stage username_common_stage=common_stage_user pas
 vault read secret/vault-access
 
 ```
+
+## Create generic token to test and add to `bootstrap.yml`
+
+```bash
+vault token-create -id="00000000-0000-0000-0000-000000000000" -policy="root"
+```
+
+```yaml
+spring:
+  application:
+    name: vault-access
+  cloud:
+    vault:
+      token: 00000000-0000-0000-0000-000000000000
+      scheme: http
+
+```
+
+
 
 ## If Cloud Connectors are not used, following properties need to be set
 
