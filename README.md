@@ -1,5 +1,7 @@
 # Spring Boot Application to Read Values From Vault
 
+## [Understanding Vault](https://thanethomson.com/2017/06/06/enterprise-security-spring-vault/)
+
 Application startup stack trace shows values retrieved from vault.
 
 
